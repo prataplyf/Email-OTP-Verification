@@ -3,10 +3,15 @@ import smtplib # for send message to mail
 from random import randint # to generate random number
 import re # for email validation
 import pymongo # for connect with database
+from pymongo import MongoClient
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-mydb = myclient["emailid"]
+
+myclient = MongoClient("mongodb+srv://pratalpyf:ashish1234@cluster0-rwgat.mongodb.net/test?retryWrites=true&w=majority")
+mydb = myclient.prataplyf
 mycol = mydb["emails"]
+
+
+
 
 app = Flask(__name__)
 
